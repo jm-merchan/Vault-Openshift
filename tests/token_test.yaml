@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: payroll
+  labels:
+    app: payroll
+spec:
+  serviceAccountName: internal-app
+  containers:
+    - name: payroll
+      image: nginxinc/nginx-unprivileged:stable-alpine
